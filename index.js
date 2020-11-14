@@ -16,6 +16,7 @@ sequelize
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.post("/publish/:topic", publishTopic);
 app.post("/subscribe/:topic", subscribeTotopic);
